@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="./slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="./slick/slick-theme.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+  </head>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    .slider {
+      width: 100%;
+      margin: 100px auto;
+    }
+
+    .slick-slide {
+      margin: 0px 20px;
+    }
+
+    .slick-slide img {
+      width: 100%;
+    }
+
+    .slick-prev:before,
+    .slick-next:before {
+      color: black;
+    }
+
+    .slick-slide {
+      transition: all ease-in-out 0.3s;
+      opacity: 0.2;
+    }
+
+    .slick-active {
+      opacity: 0.5;
+    }
+
+    .slick-current {
+      opacity: 1;
+    }
+    .hello {
+      position: fixed !important;
+      bottom: 20px;
+      right: 20px;
+    }
+    .btn-whatsapp-pulse {
+      background: #25d366;
+      color: white !important;
+
+      font-size: 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 0;
+      height: 0;
+      padding: 35px;
+      text-decoration: none !important;
+      border-radius: 50%;
+      animation-name: pulse;
+      animation-duration: 1.5s;
+      animation-timing-function: ease-out;
+      animation-iteration-count: infinite;
+      z-index: 100;
+    }
+
+    @keyframes pulse {
+      0% {
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.5);
+      }
+      80% {
+        box-shadow: 0 0 0 14px rgba(37, 211, 102, 0);
+      }
+    }
+  </style>
+  <body>
+    <div>
+      <img src="images/m.jpg" alt="" class="w-100" srcset="" />
+    </div>
+    <main
+      class="animate__animated animate__bounce animate__infinite infinite hello"
+    >
+      <a
+        href="https://api.whatsapp.com/send?phone=+919817286751&amp;text=Hi"
+        target="blank"
+        class="btn-whatsapp-pulse"
+        ><i class="fab fa-whatsapp"></i
+      ></a>
+    </main>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero cupiditate
+      eum quae voluptates neque officia provident, reprehenderit doloribus
+      fugiat, perspiciatis dicta delectus. Asperiores consectetur esse tempore
+      molestias similique nisi cum nam labore, quia, alias doloremque. Nihil
+      corrupti excepturi, ipsum possimus dolorum, delectus aspernatur quae
+      debitis vero cumque repellendus quaerat earum reiciendis officia? Iure
+      facere pariatur deserunt aspernatur repellat hic libero omnis nisi ipsa
+      cum maiores officiis voluptatem, natus minus corrupti nihil iusto iste aut
+      tempora esse suscipit reiciendis.
+    </p>
+
+    <section class="container multiple-items slider">
+      <div>
+        <img src="images/m.jpg" class="w-100" alt="" srcset="" />
+      </div>
+      <div>
+        <img src="images/m.jpg" class="w-100" alt="" srcset="" />
+      </div>
+      <div>
+        <img src="images/m.jpg" class="w-100" alt="" srcset="" />
+      </div>
+      <div>
+        <img src="images/m.jpg" class="w-100" alt="" srcset="" />
+      </div>
+      <div>
+        <img src="images/m.jpg" class="w-100" alt="" srcset="" />
+      </div>
+      <div>
+        <img src="images/m.jpg" class="w-100" alt="" srcset="" />
+      </div>
+      <div>
+        <img src="images/m.jpg" class="w-100" alt="" srcset="" />
+      </div>
+      <div>
+        <img src="images/m.jpg" class="w-100" alt="" srcset="" />
+      </div>
+      <div>
+        <img src="images/m.jpg" class="w-100" alt="" srcset="" />
+      </div>
+    </section>
+
+    <script
+      src="https://code.jquery.com/jquery-2.2.0.min.js"
+      type="text/javascript"
+    ></script>
+    <script
+      src="./slick/slick.js"
+      type="text/javascript"
+      charset="utf-8"
+    ></script>
+    <script type="text/javascript">
+      $(document).on('ready', function () {
+        $('.multiple-items').slick({
+          infinite: true,
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          autoplay: true,
+          autoplaySpeed: 2000,
+
+          responsive: [
+            {
+              breakpoint: 1024,
+              settings: {
+                slidesToShow: 3,
+                slidesToScroll: 3,
+                infinite: true,
+                dots: true,
+              },
+            },
+            {
+              breakpoint: 600,
+              settings: {
+                slidesToShow: 2,
+                slidesToScroll: 2,
+              },
+            },
+            {
+              breakpoint: 480,
+              settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1,
+              },
+            },
+            // You can unslick at a given breakpoint now by adding:
+            // settings: "unslick"
+            // instead of a settings object
+          ],
+        });
+      });
+    </script>
+  </body>
+</html>
